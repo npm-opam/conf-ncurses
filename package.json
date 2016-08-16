@@ -6,11 +6,10 @@
             "globalCollisionBehavior": "clobber",
             "val": "true"
         },
-        "PATH": {
+        "conf_ncurses_version": {
             "global": true,
-            "resolveAsRelativePath": true,
-            "globalCollisionBehavior": "joinPath",
-            "val": "./_build/ocamlfind/bin"
+            "globalCollisionBehavior": "clobber",
+            "val": "0.0.0"
         },
         "conf_ncurses_enable": {
             "global": true,
@@ -22,10 +21,22 @@
             "resolveAsRelativePath": true,
             "globalCollisionBehavior": "joinPath",
             "val": "./_build/ocamlfind/lib"
+        },
+        "version": {
+            "global": true,
+            "globalCollisionBehavior": "clobber",
+            "val": "0.0.0"
+        },
+        "PATH": {
+            "global": true,
+            "resolveAsRelativePath": true,
+            "globalCollisionBehavior": "joinPath",
+            "val": "./_build/ocamlfind/bin"
         }
     },
     "name": "conf-ncurses",
     "dependencies": {
+        "substs": "https://github.com/yunxing/opam-installer-bin.git",
         "nopam": "https://github.com/yunxing/nopam.git",
         "ocaml": "https://github.com/npm-opam/ocaml.git#npm-4.02.3",
         "dependency-env": "https://github.com/npm-ml/dependency-env.git"
