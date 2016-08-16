@@ -39,7 +39,7 @@
         "substs": "https://github.com/yunxing/substs.git",
         "nopam": "https://github.com/yunxing/nopam.git",
         "ocaml": "https://github.com/npm-opam/ocaml.git#npm-4.02.3",
-        "opam-installer": "https://github.com/yunxing/opam-installer-bin.git",
+        "opam-installer-bin": "https://github.com/yunxing/opam-installer-bin.git",
         "dependency-env": "https://github.com/npm-ml/dependency-env.git"
     },
     "scripts": {
