@@ -1,38 +1,28 @@
 {
-    "optDependencies": {},
     "name": "conf-ncurses",
+    "optionalDependencies": {},
     "exportedEnvVars": {
-        "conf_ncurses_installed": {
-            "global": true,
-            "globalCollisionBehavior": "clobber",
-            "val": "true"
-        },
-        "conf_ncurses_version": {
-            "global": true,
-            "globalCollisionBehavior": "clobber",
-            "val": "0.0.0"
-        },
-        "conf_ncurses_enable": {
-            "global": true,
-            "globalCollisionBehavior": "clobber",
-            "val": "enable"
-        },
-        "FINDLIB": {
+        "PATH": {
             "global": true,
             "resolveAsRelativePath": true,
             "globalCollisionBehavior": "joinPath",
-            "val": "./_build/ocamlfind/lib"
+            "val": "./_build/ocamlfind/bin"
         },
         "version": {
             "global": true,
             "globalCollisionBehavior": "clobber",
             "val": "0.0.0"
         },
-        "PATH": {
+        "conf_ncurses_version": {
+            "global": true,
+            "globalCollisionBehavior": "clobber",
+            "val": "0.0.0"
+        },
+        "FINDLIB": {
             "global": true,
             "resolveAsRelativePath": true,
             "globalCollisionBehavior": "joinPath",
-            "val": "./_build/ocamlfind/bin"
+            "val": "./_build/ocamlfind/lib"
         }
     },
     "version": "0.0.0",
@@ -44,6 +34,6 @@
         "dependency-env": "https://github.com/npm-ml/dependency-env.git"
     },
     "scripts": {
-        "postinstall": "eval $(dependencyEnv) && nopam && (opam-installer --prefix=$opam_prefix || true)"
+        "postinstall": "eval $(dependencyEnv) && nopam && (opam-installer --prefix=$opam_prefix || true) && injectOpamEnvs"
     }
 }
